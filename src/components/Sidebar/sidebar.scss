@@ -1,0 +1,20 @@
+.sidebar {
+  @apply bg-white shadow-lg min-h-screen flex flex-col justify-between items-center p-2 transition-all fixed overflow-hidden;
+  .sidebar-logo{
+    @apply flex flex-col items-center gap-2 w-full;
+    img{
+      @apply max-w-[70px] max-h-[70px] rounded-full;
+    }
+    .site-name{
+        @apply text-2xl font-bold text-primary;
+    }
+  }
+  .sidebar-menu{
+    @apply flex flex-col gap-2 mt-4 w-full;
+    .sidebar-menu-item{
+      @apply flex flex-row items-center gap-4 p-4 rounded-md hover:bg-gray-100 transition-all duration-300
+      hover:text-primary;
+    }
+  }
+}
+

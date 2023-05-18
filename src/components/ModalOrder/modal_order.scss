@@ -1,0 +1,58 @@
+.modal-order {
+  @apply relative left-1/2 top-1/2 w-full h-full overflow-y-auto xl:overflow-y-visible xl:h-[80%] xl:w-[80%] bg-[#f8f8f8] -translate-x-1/2 -translate-y-1/2 transform xl:rounded-xl;
+  .close-btn {
+    @apply absolute top-4 right-4 z-10;
+  }
+
+  .main-content {
+    @apply relative h-full w-full flex flex-col xl:flex-row overflow-hidden;
+    .left-content {
+      @apply w-full xl:w-[75%] h-full p-4 flex flex-col;
+      .search-bar {
+        @apply flex justify-between items-center gap-2;
+        .input-search {
+          @apply w-full rounded-md border border-gray-300 p-2 outline-none;
+        }
+
+        .btn-search {
+          @apply rounded-md bg-white border border-gray-300 text-gray-500 hover:border-primary hover:text-primary transition-all p-2;
+        }
+      }
+
+      .menu-container {
+        @apply mt-4 flex flex-col gap-4 h-full;
+      }
+    }
+
+    .right-content {
+      @apply w-full xl:w-[25%] h-full bg-white rounded-r-xl p-4 shadow flex flex-col gap-4 ;
+      .table-number {
+        @apply font-semibold text-lg
+      }
+
+      .order-container {
+        @apply rounded mt-4 overflow-y-auto h-[70%] flex flex-col gap-2;
+      }
+
+      .invoice {
+        @apply bg-gray-100 rounded p-4 flex flex-col gap-2;
+        .total {
+          @apply flex justify-between items-center;
+        }
+
+        .buttons {
+          @apply flex gap-2 flex-row xl:flex-col mt-4 flex-wrap;
+        }
+      }
+    }
+  }
+}
+
+.hide {
+  @apply absolute top-0 -right-[100%] xl:relative xl:right-0 transition-all;
+}
+
+.show {
+  @apply absolute top-0 right-0 transition-all;
+}
+

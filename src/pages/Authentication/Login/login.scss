@@ -1,0 +1,163 @@
+.login-screen {
+  @apply bg-bg-primary h-screen w-screen flex justify-center items-center box-border overflow-hidden relative;
+  .circle {
+    @apply w-[350px] h-[350px] rounded-full bg-[#e4e9f4] absolute;
+    animation: move-top-bottom 3s infinite;
+
+    &:nth-child(1) {
+      @apply top-[-100px] left-[-100px];
+    }
+
+    &:nth-child(2) {
+      @apply top-[-100px] right-[-100px] w-[300px] h-[300px];
+    }
+
+    &:nth-child(3) {
+      @apply bottom-[-100px] left-[500px] w-[250px] h-[250px];
+    }
+  }
+
+  .polygon {
+    z-index: 10;
+    @apply absolute ;
+
+    &:nth-child(4) {
+      @apply top-[100px] left-[100px]  h-[100px] w-[100px];
+      animation: move-top-bottom 5s infinite;
+    }
+
+    &:nth-child(5) {
+      @apply top-[150px] right-[100px]  h-[100px] w-[100px];
+      animation: alternate-reverse move-right-left 3s infinite;
+    }
+
+    &:nth-child(6) {
+      @apply top-[50px] right-[100px]  h-[100px] w-[100px];
+      animation: alternate-reverse move-top-bottom 3s infinite;
+    }
+
+    &:nth-child(7) {
+      @apply top-[50px] left-[100px]  h-[100px] w-[100px];
+        animation: alternate-reverse move-right-left 3s infinite;
+    }
+
+    &:nth-child(8) {
+      @apply bottom-[40px] left-[100px]  h-[100px] w-[100px];
+      animation: ease-in-out move-top-bottom 3s infinite;
+    }
+
+    &:nth-child(9) {
+      @apply bottom-[60px] right-[50px]  h-[100px] w-[100px];
+        animation: ease-in-out move-right-left 3s infinite;
+    }
+  }
+
+  .login-form {
+    @apply w-[90%] xl:w-[80%] h-auto xl:h-[80%] p-2 xl:p-0  bg-white rounded-2xl flex justify-center items-center shadow z-10 relative;
+    .login-form-left {
+      @apply w-[50%] h-full flex flex-col justify-center items-center rounded-l-2xl relative overflow-hidden hidden xl:flex;
+      background: radial-gradient(50% 50% at 50% 50%, #64ccd9 0%, #1795A8 100%);
+
+      .shape {
+        @apply w-[100px] h-[100px] rounded-full absolute bg-primary-dark;
+        &:nth-child(3) {
+          @apply top-[-50px] left-[-50px] w-[200px] h-[200px];
+          animation: move-right-left 3s infinite;
+        }
+
+        &:nth-child(2) {
+          @apply bottom-[10px] left-[20px] w-[50px] h-[50px];
+          animation: move-top-bottom 3s infinite;
+        }
+      }
+    }
+
+    .login-form-right {
+      @apply w-full md:w-[90%] xl:w-[50%] h-full flex flex-col justify-center items-center rounded-r-2xl;
+      .logo {
+        @apply w-[100px] h-[100px] rounded-full bg-[#3A54AA] flex justify-center items-center;
+      }
+
+      .title-login {
+        @apply text-center;
+        .main-title {
+          @apply font-bold text-3xl;
+        }
+
+        .sub-title {
+          @apply text-sm mt-4;
+        }
+      }
+
+      .form {
+        @apply w-[90%] md:w-[60%] mt-10 flex flex-col gap-4 ;
+        .input {
+          @apply w-full;
+        }
+
+        .btn-login {
+          @apply w-full mt-4 bg-primary text-white font-semibold py-2 rounded-md text-center hover:bg-primary-dark transition-all duration-300;
+          .btn {
+            @apply w-full py-2 text-center;
+          }
+        }
+      }
+
+      .social-login {
+        @apply w-[60%] mt-4 flex flex-col items-center gap-4 ;
+        .social-login-btn {
+          @apply w-full flex flex-row md:flex-col justify-center items-center gap-4;
+          .btn {
+            @apply w-fit md:w-full p-2 flex items-center justify-center gap-2 rounded-md text-center text-gray-400 border border-gray-400 font-semibold;
+            .text {
+              @apply hidden md:block
+            }
+
+            &:nth-child(1) {
+              @apply hover:border-[#EA4335] hover:text-[#EA4335] transition-all duration-300;
+            }
+
+            &:nth-child(2) {
+              @apply hover:border-[#3B5998] hover:text-[#3B5998] transition-all duration-300;
+            }
+          }
+        }
+      }
+
+      .register {
+        @apply mt-8 text-center;
+        .register-link {
+          @apply text-primary font-semibold;
+        }
+      }
+    }
+  }
+}
+
+@keyframes move-top-bottom {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes move-right-left {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}

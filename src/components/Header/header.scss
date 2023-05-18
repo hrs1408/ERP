@@ -1,0 +1,9 @@
+.header{
+  @apply w-full py-5 bg-white shadow-md flex justify-between lg:justify-end items-center px-4 rounded-md;
+  .header-menu{
+    @apply flex gap-4 items-center;
+    .button-menu{
+        @apply rounded-full font-semibold gap-2 border p-[10px] flex justify-center items-center hover:bg-gray-100 hover:text-primary-light transition-all duration-300;
+    }
+  }
+}
